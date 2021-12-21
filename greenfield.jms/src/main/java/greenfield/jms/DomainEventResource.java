@@ -19,6 +19,6 @@ public class DomainEventResource {
 	}
 
 	private DomainEvent buildDomainEvent() {
-		return new DomainEvent(Long.valueOf(System.currentTimeMillis()), "My Name");
+		return new DomainEvent((int) System.currentTimeMillis(), "My Name");
 	}
 }

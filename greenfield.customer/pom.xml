@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.rpgnextgen</groupId>
+		<artifactId>greenfield-api</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>greenfield.customer</artifactId>
+	<name>Helidon API Greenfield Domain Customer</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.rpgnextgen</groupId>
+			<artifactId>greenfield.jms</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${surefire.plugin.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
