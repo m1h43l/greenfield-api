@@ -24,7 +24,7 @@
 			<artifactId>greenfield.ping</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		<dependency>
+ 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
 			<artifactId>greenfield.jms</artifactId>
 			<version>${project.parent.version}</version>
