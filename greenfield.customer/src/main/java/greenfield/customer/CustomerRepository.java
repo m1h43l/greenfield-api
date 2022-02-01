@@ -1,5 +1,6 @@
 package greenfield.customer;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,6 +35,10 @@ public class CustomerRepository {
 
 	public Customer get(Integer id) {
 		return customers.get(id);
+	}
+
+	public Collection<Customer> values() {
+		return customers.values();
 	}
 
 	public void remove(Integer id) {
