@@ -49,7 +49,7 @@ public class CustomerResource {
 	}
 
 	@GET
-	@Path("/")
+	@Path("{id}")
 	@Produces("application/app.vnd.bauformat.extended")
 	public Response getExtended(@HeaderParam("accept") String acceptMediaType, @PathParam("id") Integer id) {
 		logger.info("Accepted media type: " + acceptMediaType);
