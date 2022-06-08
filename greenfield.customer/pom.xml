@@ -18,6 +18,12 @@
 			<artifactId>greenfield.jms</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+ 		<dependency>
+			<groupId>com.rpgnextgen</groupId>
+			<artifactId>greenfield.test</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

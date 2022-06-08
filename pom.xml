@@ -13,7 +13,7 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<helidon.version>2.4.0</helidon.version>
+		<helidon.version>2.4.2</helidon.version>
 		<jdbi.version>3.23.0</jdbi.version>
 		<jupiter.version>5.8.1</jupiter.version>
 		<jtopen.version>10.7</jtopen.version>
@@ -29,6 +29,7 @@
 		<module>greenfield.customer</module>
 		<module>greenfield.jms</module>
 		<module>greenfield.ping</module>
+		<module>greenfield.test</module>
 	</modules>
 
 	<dependencyManagement>

@@ -18,6 +18,8 @@ import io.helidon.microprofile.tests.junit5.HelidonTest;
 
 @HelidonTest
 @DisableDiscovery
+@AddBean(CustomerExtendedProvider.class)
+@AddBean(CustomerTextProvider.class)
 @AddBean(CustomerRepository.class)
 @AddBean(CustomerResource.class)
 @AddBean(DomainEventProvider.class)
@@ -31,8 +33,26 @@ public class CustomerResourceTest {
 	WebTarget webTarget;
 
 	@Test
-	public void test_getExisting() {
-		Customer c = webTarget.path("api/customer/1").request().get(Customer.class);
+	public void test_contentTypeJson() {
+		Customer c = webTarget.path("api/customer/1")
+				.request()
+				.header("Accept", "application/json")
+				.get(Customer.class);
+		Assertions.assertNotNull(c);
+	}
+
+	@Test
+	public void test_contentTypeText() {
+		Customer c = webTarget.path("api/customer/1").request().header("Accept", "text/plain").get(Customer.class);
+		Assertions.assertNotNull(c);
+	}
+
+	@Test
+	public void test_contentTypeCustom() {
+		Customer c = webTarget.path("api/customer/1")
+				.request()
+				.header("Accept", "application/app.vnd.bauformat.extended")
+				.get(Customer.class);
 		Assertions.assertNotNull(c);
 	}
 }
