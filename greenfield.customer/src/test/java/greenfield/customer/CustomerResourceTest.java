@@ -43,16 +43,18 @@ public class CustomerResourceTest {
 
 	@Test
 	public void test_contentTypeText() {
-		Customer c = webTarget.path("api/customer/1").request().header("Accept", "text/plain").get(Customer.class);
-		Assertions.assertNotNull(c);
+		String s = webTarget.path("api/customer/1").request().header("Accept", "text/plain").get(String.class);
+		Assertions.assertNotNull(s);
+		Assertions.assertEquals("Bugs Bunny", s);
 	}
 
 	@Test
 	public void test_contentTypeCustom() {
-		Customer c = webTarget.path("api/customer/1")
+		String s = webTarget.path("api/customer/1")
 				.request()
 				.header("Accept", "application/app.vnd.bauformat.extended")
-				.get(Customer.class);
-		Assertions.assertNotNull(c);
+				.get(String.class);
+		Assertions.assertNotNull(s);
+		Assertions.assertEquals("1 - Bugs Bunny", s);
 	}
 }
